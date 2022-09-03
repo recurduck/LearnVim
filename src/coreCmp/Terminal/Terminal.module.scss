@@ -1,0 +1,115 @@
+$close-btn-bg: #f41b16;
+$minimize-btn-bg: #f4a316;
+$maximize-btn-bg: #4cae2e;
+$btn-size: 12px;
+$btn-left-offset: 18px;
+$btn-inner-margin: 8px;
+
+.window {
+  width: 80%;
+  margin: 0 auto 2rem;
+  box-shadow: 0 .25rem .5rem #232323;
+  border-radius: .5rem;
+  flex: 1;
+  margin-bottom: 70px;
+  font-family: monospace;
+  text-align: initial;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  color: #fff;
+  
+  .bar {
+    background: #cfcfcf;
+    background: -moz-linear-gradient(top, #cfcfcf 0%, #a8a8a8 100%);
+    /* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cfcfcf), color-stop(100%,#a8a8a8)); */
+    background: -webkit-linear-gradient(top, #cfcfcf 0%,#a8a8a8 100%);
+    height: $btn-size * 2.5;
+  }
+    
+  .body {
+    background: #232323;
+    font-family: 'Proxima Nova', 'Helvetica Neue', helvetica, arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5;
+    padding-top: 0.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    .content {
+      white-space: pre-wrap;
+      overflow: hidden;
+      margin: 0 .5rem;
+      flex: 1;
+    }
+
+    .vimMonitor {
+    display: flex;
+    position: relative;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 .5rem;
+      :first-child {
+        flex: 4;
+      }
+      :nth-child(2), :last-child {
+        flex: 1;
+        text-align: end;
+      }
+    }
+  }
+}
+
+%btn {
+  width: $btn-size;
+  height: $btn-size;
+  border-radius: 100%;
+  display: block;
+  -webkit-box-shadow: 0px 1px 0px rgb(255 255 255 / 50%), 0px 0px 3px #000 inset;
+  -moz-box-shadow: 0px 1px 0px rgba(255,255,255,0.5),0px 0px 3px #000 inset;
+  box-shadow: 0px 1px 0px rgb(255 255 255 / 50%), 0px 0px 3px #000 inset;
+}
+
+.btns {
+  @extend %btn;
+  position: relative;
+  background: $minimize-btn-bg;
+  background: -moz-linear-gradient(left, $minimize-btn-bg 0%, #fcc371 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$minimize-btn-bg), color-stop(100%,#fcc371));
+  background: -webkit-linear-gradient(left, $minimize-btn-bg 0%,#fcc371 100%);
+  background: -o-linear-gradient(left, $minimize-btn-bg 0%,#fcc371 100%);
+  background: -ms-linear-gradient(left, $minimize-btn-bg 0%,#fcc371 100%);
+  background: linear-gradient(left, $minimize-btn-bg 0%,#fcc371 100%);
+  margin-left: $btn-left-offset + $btn-size + $btn-inner-margin;
+  top: $btn-size - 3;
+  &::before, &::after {
+    @extend %btn;
+    content: ' ';
+    position: absolute;
+  }
+  &::before {
+    background: $close-btn-bg;
+    background: -moz-linear-gradient(top, $close-btn-bg 0%, #fc7471 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$close-btn-bg), color-stop(100%,#fc7471));
+    background: -webkit-linear-gradient(top, $close-btn-bg 0%,#fc7471 100%);
+    background: -o-linear-gradient(top, $close-btn-bg 0%,#fc7471 100%);
+    background: -ms-linear-gradient(top, $close-btn-bg 0%,#fc7471 100%);
+    margin-left: ($btn-size + $btn-inner-margin) * -1;
+  }
+  &::after {
+    background: $maximize-btn-bg;
+    background: -moz-linear-gradient(top, $maximize-btn-bg 0%, #dafc71 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$maximize-btn-bg), color-stop(100%,#dafc71));
+    background: -webkit-linear-gradient(top, $maximize-btn-bg 0%,#dafc71 100%);
+    background: -o-linear-gradient(top, $maximize-btn-bg 0%,#dafc71 100%);
+    background: -ms-linear-gradient(top, $maximize-btn-bg 0%,#dafc71 100%);
+    margin-left: $btn-size + $btn-inner-margin;
+  }
+} 
+
+.keyboardOpen {
+  height: 55%;
+}

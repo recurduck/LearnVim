@@ -1,0 +1,48 @@
+[
+    {
+        "locale": "he",
+        "layout": [
+            "; 1 2 3 4 5 6 7 8 9 0 - =",
+            "/ ' ק ר א ט ו ן ם פ ] [ bksp",
+            "lock ש ד ג כ ע י ח ל ך ף , \\ Enter",
+            "shift \\ ז ס ב ה נ מ צ ת ץ .",
+            "🌎 Space"
+        ],
+        "shiftedLayout": [
+            "~ ! @ # $ % ^ & * ( ) _ +",
+            "Tab Q W E R T Y U I O P { }",
+            "Lock A S D F G H J K L : \" | Enter",
+            "Shift | Z X C V B N M < > ?",
+            "Esc 🌎 Space Backspace Del"
+        ],
+        "display": {
+            "{bksp}": "מחק",
+            "{shift}": "Shift",
+            "{space}": "רווח",
+            "{return}": "אישור"
+        }
+    },
+    {
+        "locale": "en",
+        "layout": [
+            "` 1 2 3 4 5 6 7 8 9 0 - =",
+            "Tab q w e r t y u i o p [ ]",
+            "Lock a s d f g h j k l ; ' Enter",
+            "Shift \\ z x c v b n m , . /",
+            "Esc 🌎 Space Backspace Del"
+        ],
+        "shiftedLayout": [
+            "~ ! @ # $ % ^ & * ( ) _ +",
+            "Tab Q W E R T Y U I O P { }",
+            "Lock A S D F G H J K L : \" | Enter",
+            "Shift | Z X C V B N M < > ?",
+            "Esc 🌎 Space Backspace Del"
+        ],
+        "display": {
+            "{bksp}": "Backspace",
+            "{shift}": "Shift",
+            "{space}": "Space",
+            "{return}": "Return"
+        }
+    }
+]
